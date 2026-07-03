@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calculator</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="min-h-screen bg-slate-950 text-slate-100 flex items-center justify-center p-6">
+  <div class="w-full max-w-md rounded-3xl bg-slate-900/90 border border-slate-700 shadow-2xl shadow-black/40 p-6">
+    <div class="mb-6 text-center">
+      <h1 class="text-3xl font-semibold">Calculator</h1>
+      <p class="text-sm text-slate-400 mt-1">HTML + Tailwind + JavaScript</p>
+    </div>
+
+    <div class="rounded-3xl bg-slate-800 p-4 mb-5 shadow-inner shadow-black/30">
+      <input id="display" type="text" readonly class="w-full rounded-2xl bg-slate-950 text-right text-4xl font-medium p-4 text-white outline-none" value="0" />
+    </div>
+
+    <div class="grid grid-cols-4 gap-3">
+      <button class="calc-btn bg-slate-700 hover:bg-slate-600 text-white py-4 rounded-2xl text-xl font-semibold" data-value="7">7</button>
+      <button class="calc-btn bg-slate-700 hover:bg-slate-600 text-white py-4 rounded-2xl text-xl font-semibold" data-value="8">8</button>
+      <button class="calc-btn bg-slate-700 hover:bg-slate-600 text-white py-4 rounded-2xl text-xl font-semibold" data-value="9">9</button>
+      <button class="action-btn bg-amber-500 hover:bg-amber-400 text-slate-950 py-4 rounded-2xl text-xl font-semibold" data-value="/">÷</button>
+
+      <button class="calc-btn bg-slate-700 hover:bg-slate-600 text-white py-4 rounded-2xl text-xl font-semibold" data-value="4">4</button>
+      <button class="calc-btn bg-slate-700 hover:bg-slate-600 text-white py-4 rounded-2xl text-xl font-semibold" data-value="5">5</button>
+      <button class="calc-btn bg-slate-700 hover:bg-slate-600 text-white py-4 rounded-2xl text-xl font-semibold" data-value="6">6</button>
+      <button class="action-btn bg-amber-500 hover:bg-amber-400 text-slate-950 py-4 rounded-2xl text-xl font-semibold" data-value="*">×</button>
+
+      <button class="calc-btn bg-slate-700 hover:bg-slate-600 text-white py-4 rounded-2xl text-xl font-semibold" data-value="1">1</button>
+      <button class="calc-btn bg-slate-700 hover:bg-slate-600 text-white py-4 rounded-2xl text-xl font-semibold" data-value="2">2</button>
+      <button class="calc-btn bg-slate-700 hover:bg-slate-600 text-white py-4 rounded-2xl text-xl font-semibold" data-value="3">3</button>
+      <button class="action-btn bg-amber-500 hover:bg-amber-400 text-slate-950 py-4 rounded-2xl text-xl font-semibold" data-value="-">−</button>
+
+      <button class="wide-btn col-span-2 bg-slate-700 hover:bg-slate-600 text-white py-4 rounded-2xl text-xl font-semibold" data-value="0">0</button>
+      <button class="calc-btn bg-slate-700 hover:bg-slate-600 text-white py-4 rounded-2xl text-xl font-semibold" data-value=".">.</button>
+      <button class="action-btn bg-amber-500 hover:bg-amber-400 text-slate-950 py-4 rounded-2xl text-xl font-semibold" data-value="+">+</button>
+
+      <button id="clearBtn" class="bg-rose-500 hover:bg-rose-400 text-slate-950 py-4 rounded-2xl text-xl font-semibold">C</button>
+      <button id="deleteBtn" class="bg-slate-700 hover:bg-slate-600 text-white py-4 rounded-2xl text-xl font-semibold">⌫</button>
+      <button id="equalsBtn" class="col-span-2 bg-emerald-500 hover:bg-emerald-400 text-slate-950 py-4 rounded-2xl text-xl font-semibold">=</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
