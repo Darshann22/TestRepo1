@@ -1,44 +1,87 @@
 TestRepo1
 ========
 
-Overview
---------
+Purpose
+-------
 
-A minimal web project containing `index.html` and `script.js` used for experimentation and small demos.
+`TestRepo1` is a tiny front-end demo used to experiment with simple DOM interactions and small JavaScript features. It's intended as a hands-on playground for learning or quick prototyping.
 
-What's here
------------
+Repository contents
+-------------------
 
-- `index.html` — main HTML page
-- `script.js` — JavaScript for the page
+- `index.html` — the web page entry point. Contains basic markup and placeholders for UI elements.
+- `script.js` — client-side JavaScript. Intended for the interactive feature(s).
 
-Quick start
------------
+Project goals
+-------------
 
-1. Open `index.html` in your browser (double-click or serve with a static server).
-2. Edit `script.js` and refresh the page to see changes.
+1. Provide a minimal, well-documented example of a web feature (e.g., a button that toggles content).
+2. Keep the project tiny and easy to extend.
+3. Demonstrate a simple development loop: edit, run locally, and validate.
 
-Run a local static server (recommended)
+Development — run locally
+------------------------
+
+Option A — quick (open file in browser)
+
+1. Double-click `index.html` to open it in your default browser.
+
+Option B — recommended (static server)
 
 ```bash
+# Python 3 built-in HTTP server
 python3 -m http.server 8000
-# then open http://localhost:8000
+# then open http://localhost:8000 in your browser
+
+# or, with npm installed, a quick static server:
+# npx http-server -p 8000
 ```
 
-Suggested next tasks
---------------------
+Suggested first feature (example)
+---------------------------------
 
-- Add a short project description and goals in this `README.md`.
-- Implement a small interactive feature in `script.js` (e.g., button click handler).
-- Add a simple test or checklist for manual verification.
+Implement a small feature in `script.js`:
 
-Contributing
-------------
+- Add a button with id `toggleBtn` in `index.html`.
+- When clicked, toggle the visibility of a content area with id `content` and update the button label to `Show`/`Hide`.
 
-1. Make changes on a branch.
-2. Commit and push to your fork or branch.
-3. Open a PR against `main`.
+Manual verification checklist
+-----------------------------
 
-Contact
--------
-Open an issue in the repo for questions or proposals.
+1. Open the app in the browser.
+2. Click the `toggleBtn` and confirm the `content` area appears/disappears.
+3. Ensure no console errors are shown.
+
+Testing and automation
+----------------------
+
+This repo doesn't include automated tests yet. For future work, consider adding a tiny test runner or using Playwright/Puppeteer for end-to-end checks.
+
+Branching & contribution workflow
+--------------------------------
+
+1. Create a branch for your work: `git checkout -b feat/toggle-button`.
+2. Make changes and commit locally.
+3. Push the branch and open a pull request against `main`.
+
+Commit & push example
+----------------------
+
+```bash
+git add .
+git commit -m "Add toggle button feature"
+git push origin feat/toggle-button
+```
+
+Next steps (recommended)
+------------------------
+
+- Implement the example toggle feature in `script.js` and `index.html`.
+- Run the app locally and verify the manual checklist.
+- Add a short automated test or e2e check if desired.
+
+Questions / contact
+-------------------
+
+Open an issue in the repo to discuss features, bugs, or improvements.
+
